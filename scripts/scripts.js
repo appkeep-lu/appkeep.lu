@@ -1,6 +1,6 @@
 /* Smooth Scroll */
 // Enabled on all a tags with href "#" attributes
-const scroll = new SmoothScroll('a[href*="#"]');
+const smoothScroll = new SmoothScroll('a[href*="#"]');
 
 
 /* Back To Top Button */
@@ -36,29 +36,64 @@ function post(url, form) {
 
 const handleNewsletter = (event) => {
 	event.preventDefault();
+	const text = newsletterBtn.innerHTML;
+	newsletterBtn.innerHTML = "<i class=\"fas fa-spinner\"></i>"
+	newsletterBtn.disabled = true;
 	post("https://formbold.com/s/9RBd9", newsletterForm)
 			.then((r) => {
-				console.log("Newsletter submitted");
+				console.log("Request submitted");
+				Toastify({
+					text: "Request submitted",
+					duration: 5000
+				}).showToast();
+				newsletterForm.reset();
+				newsletterBtn.innerHTML = text;
+				newsletterBtn.disabled = false;
 			})
 			.catch((r) => {
 				console.log("Newsletter error");
+				newsletterBtn.innerHTML = text;
+				newsletterBtn.disabled = false;
+			});
+};
+
+const handleContact = (event) => {
+	event.preventDefault();
+	const text = contactBtn.innerHTML;
+	contactBtn.innerHTML = "<i class=\"fas fa-spinner\"></i>"
+	contactBtn.disabled = true;
+	post("https://formbold.com/s/98N2o", contactForm)
+			.then((r) => {
+				console.log("Message submitted");
+				Toastify({
+					text: "Message submitted",
+					duration: 5000
+				}).showToast();
+				contactForm.reset();
+				contactBtn.innerHTML = text;
+				contactBtn.disabled = false;
+			})
+			.catch((r) => {
+				console.log("Message error");
+				contactBtn.innerHTML = text;
+				contactBtn.disabled = false;
 			});
 };
 
 const newsletterForm = document.getElementById("newsletterForm");
 newsletterForm.addEventListener('submit', handleNewsletter);
-
-const handleContact = (event) => {
-	event.preventDefault();
-	post("https://formbold.com/s/98N2o", contactForm)
-			.then((r) => {
-				console.log("Message submitted");
-			})
-			.catch((r) => {
-				console.log("Message error");
-			});
-};
+const newsletterBtn = document.getElementById("newsletterBtn");
 
 const contactForm = document.getElementById("contactForm");
 contactForm.addEventListener('submit', handleContact);
+const contactBtn = document.getElementById("contactBtn");
 
+require.config({
+	paths: {
+		'fontawesome': 'vendor/fontawesome/fontawesome'
+	}
+})
+
+require(['fontawesome'], function (fontawesome) {
+	console.log('Congrats, Font Awesome is installed using Require.js')
+})

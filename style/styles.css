@@ -45,6 +45,23 @@ body, p {
 	font: 400 1rem/1.625rem "Poppins", FreeSans;
 }
 
+#mtoast {
+	/* (A) POSITION */
+	position: fixed; z-index: 99;
+	top: 5px; right: 5px;
+
+	/* (B) DIMENSION */
+	width: 200px;
+	padding: 10px;
+
+	/* (C) COLORS */
+	background: #ffebe1;
+	border: 1px solid #000;
+
+	/* (D) HIDDEN BY DEFAULT */
+	display: none;
+}
+
 h1 {
 	color: #252936;
 	font-size: 3.25rem;
