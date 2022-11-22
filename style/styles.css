@@ -134,6 +134,7 @@ h6 {
 
 img {
 	max-width: 100%;
+	min-width: 100%;
 	vertical-align: middle; /* solves a gap when inside image-container */
 }
 
