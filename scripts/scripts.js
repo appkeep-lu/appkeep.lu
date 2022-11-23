@@ -95,5 +95,5 @@ require.config({
 })
 
 require(['fontawesome'], function (fontawesome) {
-	console.log('Congrats, Font Awesome is installed using Require.js')
+	console.log('');
 })
