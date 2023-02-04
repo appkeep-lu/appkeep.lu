@@ -389,11 +389,11 @@ a:hover {
 /**********************/
 .navbar {
     position: absolute;
-    top: 26px;
+    top: 0;
     right: 0;
     left: 0;
-    background-color: transparent;
-    color: #ffffff;
+    background-color: #fff;
+    padding: 36px 0 24px 0;
 }
 
 .navbar .flex {
@@ -413,7 +413,6 @@ a:hover {
 
 .navbar .logo-text {
     margin-bottom: 0.5rem;
-    color: #ffffff;
     font-weight: 500;
     font-size: 2rem;
     line-height: 1.875rem;
@@ -429,10 +428,6 @@ a:hover {
 
 .navbar ul li {
     padding: 0 0.75rem 0.5rem 0.75rem;
-}
-
-.navbar ul a {
-    color: #ffffff;
 }
 
 .navbar ul a:hover {
@@ -634,7 +629,7 @@ header .btn-outline-lg:hover {
 footer {
     padding-top: 5.5rem;
     padding-bottom: 4.5rem;
-    background-color: #252936;
+    background-color: #838ba2;
     text-align: center;
 }
 
@@ -751,9 +746,6 @@ footer .fab {
 
     /* end of general styles */
     /* Navigation */
-    .navbar {
-        top: 36px;
-    }
 
     .navbar .flex {
         flex-direction: row;
