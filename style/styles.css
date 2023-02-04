@@ -276,7 +276,7 @@ a:hover {
     border: 2px solid #e6e7ec;
     background-color: #ffffff;
     color: #667077;
-    font-size: calc(.2em + .8vw);
+    font-size: 0.8em;
     line-height: 1.5rem;
     font-family: "Poppins", sans-serif;
     -webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
@@ -312,7 +312,7 @@ a:hover {
     background-color: #25563f;
     color: #ffffff;
     font-weight: 400;
-    font-size: calc(.2em + .8vw);
+    font-size: 0.8em;
     line-height: 0;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
@@ -339,7 +339,7 @@ a:hover {
     border-radius: 12px;
     background-color: #ffffff;
     color: #667077;
-    font-size: calc(.2em + .8vw);
+    font-size: 0.8em;
     line-height: 1.5rem;
     font-family: "Poppins", sans-serif;
     -webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
@@ -370,7 +370,7 @@ a:hover {
     background-color: #f87b6b;
     color: #ffffff;
     font-weight: bold;
-    font-size: calc(.2em + .8vw);
+    font-size: 0.8em;
     line-height: 0;
     font-family: "Poppins", sans-serif;
     cursor: pointer;
