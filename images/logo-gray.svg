@@ -10,7 +10,7 @@
     <style>
      <![CDATA[
        path.letter {
-         fill: #999999 !important;
+         fill: #646464 !important;
          fill-opacity:0.992157;
          stroke-width:0.82032;
        }
@@ -20,7 +20,7 @@
          stroke-width:0.209333
        }
        path.line {
-         fill: #999999 !important;
+         fill: #646464 !important;
          fill-opacity:1;
          stroke-width:0.209333
        }
